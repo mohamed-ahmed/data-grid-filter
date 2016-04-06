@@ -10,16 +10,27 @@ angular.module('myApp.main', ['ngRoute'])
 }])
 
 .controller('mainCtrl', function($scope) {
-	console.log("in main controller");
 
-	$scope.testVar = "hello world;"
 
-	$scope.myData = [{name: "Moroni", age: 50},
-		{name: "Tiancum", age: 43},
-		{name: "Jacob", age: 27},
-		{name: "Nephi", age: 29},
-		{name: "Enos", age: 34}];
 
-	$scope.gridOptions = { data: 'myData' };
+    $scope.myData = [{name: "Moroni", age: 50},
+                    {name: "Tiancum", age: 43},
+                    {name: "Jacob", age: 27},
+                    {name: "Nephi", age: 29},
+                    {name: "Enos", age: 34}];
+    $scope.gridOptions = { 
+        data: 'myData',
+        enableFiltering: true,
+        columnDefs: [{
+        	field: 'name', 
+       		displayName: 'Name', 
+       		filter : {
+       			term : $scope.nameFilter
+       		}},
+                     {field:'age', displayName:'Age'}]
+        };
 
+ 	$scope.inputChanged = function(){
+		$scope.gridOptions.columnDefs[0].filter.term = $scope.nameFilter;
+	}
 });
