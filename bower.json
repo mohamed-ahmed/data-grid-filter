@@ -1,0 +1,28 @@
+{
+  "name": "data-grid-filter",
+  "description": "A reuseable data-grid and filter dropdown menu",
+  "version": "0.0.0",
+  "homepage": "''",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0"
+  },
+  "authors": [
+    "Mohamed Ahmed <mohamed.ahmed@live.ca>"
+  ],
+  "main": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
