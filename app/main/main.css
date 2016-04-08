@@ -8,3 +8,7 @@
     background-color: green;
     color: white;
 }
+
+.ui-grid-filter-container {
+  display: none;
+}
