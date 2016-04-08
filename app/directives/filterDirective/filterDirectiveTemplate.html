@@ -1,5 +1,5 @@
-<form>
-	<select>
-		<option ng-repeat="option in options">{{option}}<option>
+<form class="filter-form">
+	<select ng-model="color" ng-options="option for option in options">
 	</select>
 </form>
+<button ng-click="update()">Update</button>

@@ -12,3 +12,8 @@
 .ui-grid-filter-container {
   display: none;
 }
+
+#grid-filter{
+	margin-top : 20px;
+	display: block;
+}

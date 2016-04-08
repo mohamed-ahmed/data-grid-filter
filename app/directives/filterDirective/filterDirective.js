@@ -10,6 +10,10 @@ app.directive('filter', function(FilterService) {
         },
         link : function(scope){
         	scope.options = FilterService.options;
+        	scope.color = FilterService.options[0];
+        	scope.update = function(){
+        		console.log("updating. values: ", scope.color);
+        	}
         }
     };
 });
